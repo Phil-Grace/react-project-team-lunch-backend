@@ -1736,3 +1736,1310 @@ Processing by UsersController#index as */*
 Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/users" for ::1 at 2019-09-08 16:49:25 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 24ms (Views: 14.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:49:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:50:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:51:11 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:51:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:52:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:52:21 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:52:50 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:52:56 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:53:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:53:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:54:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:54:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:56:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:56:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:57:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:57:14 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:57:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:58:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:58:02 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:58:10 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:58:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:59:10 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 16:59:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:00:29 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:01:17 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:01:51 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:03:28 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:03:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:05:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:06:56 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:07:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:07:29 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:07:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:08:01 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:08:04 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:08:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:10:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:10:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:11:30 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:11:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:18:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:21:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:25:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:27:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:27:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:27:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:29:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:29:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:29:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:29:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:30:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:30:42 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:31:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:32:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:33:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:34:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:34:40 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:35:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:35:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:36:12 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:36:30 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:39:23 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:39:27 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:40:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:41:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:42:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:49:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:50:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:51:27 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:51:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:54:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:54:23 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:55:11 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:56:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:57:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:58:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:58:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:59:03 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:59:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 17:59:28 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:00:49 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:01:23 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:01:29 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:04:49 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:05:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:06:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:06:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:07:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:08:17 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 27ms (Views: 7.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:12:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:12:56 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:13:32 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:14:12 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:15:27 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:16:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:17:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:18:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:25:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:26:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:26:18 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[36mTeam Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:26:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 38ms (Views: 21.2ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:27:10 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Create (4.2ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "The Lazy Boyz"], ["created_at", "2019-09-08 23:27:10.523569"], ["updated_at", "2019-09-08 23:27:10.523569"]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 22ms (Views: 0.6ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:27:16 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:28:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 31ms (Views: 19.6ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:28:11 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:28:51 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The lost boyz", "team"=>{"team_name"=>"The lost boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The lost boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 6.1ms)
+
+
+  
+NoMethodError (undefined method `location' for #<Team:0x000055d16152b8f8>):
+  
+app/controllers/teams_controller.rb:10:in `create'
+Started POST "/teams" for ::1 at 2019-09-08 18:29:06 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The lost boyz", "team"=>{"team_name"=>"The lost boyz"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The lost boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Create (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "The lost boyz"], ["created_at", "2019-09-08 23:29:06.309747"], ["updated_at", "2019-09-08 23:29:06.309747"]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:30:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 35ms (Views: 25.3ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:30:12 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:30:30 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:30:38 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:30:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:30:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:31:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:31:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:31:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:32:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:33:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:33:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:33:40 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:33:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:35:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:35:39 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:35:41 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:35:41 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:35:57 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"Philio", "team"=>{"team_name"=>"Philio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "Philio"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "Philio"], ["created_at", "2019-09-08 23:35:57.635399"], ["updated_at", "2019-09-08 23:35:57.635399"]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:36:14 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:18 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:36:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:48 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:49 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:49 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:49 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:36:53 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:38:01 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:38:01 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:38:11 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-08 18:38:11 -0500
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:38:32 -0500
+Started GET "/teams" for ::1 at 2019-09-08 18:38:32 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTeam Load (2.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:39:18 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:40:17 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:40:17 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:40:18 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:40:32 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:40:37 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:40:43 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"Philio!", "team"=>{"team_name"=>"Philio!"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "Philio!"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "Philio!"], ["created_at", "2019-09-08 23:40:43.325095"], ["updated_at", "2019-09-08 23:40:43.325095"]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:43:57 -0500
+Started GET "/teams" for ::1 at 2019-09-08 18:43:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.7ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (5.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:44:02 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:45:22 -0500
+Started GET "/users" for ::1 at 2019-09-08 18:45:22 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:45:25 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:45:41 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:45:41 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:45:44 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:47:07 -0500
+Started GET "/users" for ::1 at 2019-09-08 18:47:07 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTeam Load (2.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:47:35 -0500
+Started GET "/teams" for ::1 at 2019-09-08 18:47:35 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mTeam Load (3.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-08 18:48:00 -0500
+Started GET "/users" for ::1 at 2019-09-08 18:48:00 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-08 18:48:10 -0500
+Started GET "/teams" for ::1 at 2019-09-08 18:48:10 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 29ms (Views: 11.3ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/teams" for ::1 at 2019-09-08 18:48:13 -0500
+Processing by TeamsController#create as */*
+  Parameters: {"team_name"=>"The Lazy Boyz", "team"=>{"team_name"=>"The Lazy Boyz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "The Lazy Boyz"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teams_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+

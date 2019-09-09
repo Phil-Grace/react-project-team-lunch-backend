@@ -1,16 +1,16 @@
 class TeamsController < ApplicationController
 
     def index
-        @teams = Team.all
-        render json: @teams#, include: [:users]
+        teams = Team.all
+        render json: teams#, include: [:users]
     end
 
     def create
         team = Team.new(team_params)
-        if team.valid?
+        if team.save
             render json: team
         else
-            render json: {errors: team.errors.full_messages} 
+            render json: {errors: team.errors.full_messages}
         end
     end
 
