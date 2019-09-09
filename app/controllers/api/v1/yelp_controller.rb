@@ -1,32 +1,51 @@
-require 'yelp'
-require 'json'
-require 'optparse'
-class Api::V1::YelpController < ApplicationController
+require "json"
+require "http"
+
+
+API_HOST = "https://api.yelp.com"
+SEARCH_PATH = "/v3/businesses/search"
+BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
+API_KEY = ENV["YELP_API_KEY"]
+
+DEFAULT_BUSINESS_ID = "yelp-san-francisco"
+DEFAULT_TERM = "dinner"
+DEFAULT_LOCATION = "New York, NY"
+SEARCH_LIMIT = 10
+
+# Original Source: https://github.com/Yelp/yelp-fusion/tree/master/fusion/ruby
+
+class YelpApiAdapter
+    # #Returns a parsed json object of the request
+  
+    def self.search(term, location="chicago")
+      url = "#{API_HOST}#{SEARCH_PATH}"
+      params = {
+        term: term,
+        location: location,
+        limit: SEARCH_LIMIT
+      }
+      response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
+      response.parse["businesses"]
+    end
+  
+    def self.business_reviews(business_id)
+      url = "#{API_HOST}#{BUSINESS_PATH}#{business_id}/reviews"
+      response = HTTP.auth("Bearer #{API_KEY}").get(url)
+      response.parse["reviews"]
+    end
     
-    def search
-        # rest_cuisine = params[:cuisine]
-        # rest_location = params[:location]
-        # response = RestClient::Request.execute(
-        #     method: "GET",
-        #     url: "https://api.yelp.com/v3/businesses/search?term=#{rest_cuisine}&location=#{rest_location}",
-        #     headers: {Authorization: "Bearer #{ENV["YELP_KEY"]}"}
-        # )
-        # results = JSON.parse(response)
-        # render json: results
+    def business(business_id)
+      url = "#{API_HOST}#{BUSINESS_PATH}#{business_id}"
+      response = HTTP.auth("Bearer #{API_KEY}").get(url)
+      response.parse
     end
+    
+  end
 
-    # def fetch 
-    #     response = RestClient::Request.execute(
-    #         method: "GET",
-    #         url: "https://api.yelp.com/v3/businesses/search",
-    #         headers: {Authorization: "Bearer #{ENV["YELP_KEY"]}"}
-    #     )
-    #     results = JSON.parse(response)
-    #     render json: results
-    # end
+#   p YelpApiAdapter.search(term, "Chicago")
 
-    def show
-        # Imma try to get the yelp api
-         
-    end
-end
+#   def index
+#     query = params[:term]
+#     results = YelpApiAdapter.search(query, "Chicago")
+#     render json: {message: '', results: results }
+#   end

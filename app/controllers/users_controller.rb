@@ -13,6 +13,10 @@ class UsersController < ApplicationController
             render json: {errors: user.errors.full_messages} 
         end
     end
+
+    def login 
+
+    end
     
     private
 

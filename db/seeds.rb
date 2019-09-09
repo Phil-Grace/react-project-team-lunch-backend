@@ -24,3 +24,6 @@ UserTeam.create(user_id: 2, team_id: 1)
 UserTeam.create(user_id: 3, team_id: 1)
 UserTeam.create(user_id: 4, team_id: 2)
 
+Restaurant.create(name: "The Purple Pig", price: "$$",rating: 4, alias: ["Tapas/Small Plates", "Mediterranean", "Breakfast & Brunch"], city: "Chicago")
+Restaurant.create(name: "Eataly", price: "$$",rating: 4, alias: ["Speciality", "Pizza", "Italian"], city: "Chicago")
+Restaurant.create(name: "Imperial Lamian", price: "$$",rating: 4, alias: ["Dim Sum", "Noodles"], city: "Chicago")

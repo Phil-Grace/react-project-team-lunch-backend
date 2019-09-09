@@ -3740,3 +3740,1787 @@ Completed 200 OK in 46ms (Views: 0.4ms | ActiveRecord: 12.1ms)
 Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 23.4ms)
 
 
+Started GET "/" for ::1 at 2019-09-09 10:11:31 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "team-lunch-backend_development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (445.9ms)[0m  [1m[35mCREATE DATABASE "team-lunch-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (292.3ms)[0m  [1m[35mCREATE DATABASE "team-lunch-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7284918111191696115)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190906193801)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "company" character varying, "title" character varying, "city" character varying, "budget" integer, "alias_1" character varying, "alias_2" character varying, "alias_3" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906193801_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906193801"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTeams (20190906193901)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "teams" ("id" bigserial primary key, "team_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906193901_create_teams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906193901"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUserTeams (20190906194525)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "user_teams" ("id" bigserial primary key, "user_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906194525_create_user_teams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906194525"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateRestaurants (20190909145142)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190909145142_create_restaurants.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190909145142"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-09 15:11:57.424229"], ["updated_at", "2019-09-09 15:11:57.424229"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7284918111191696115)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserTeam Load (0.8ms)[0m  [1m[34mSELECT "user_teams".* FROM "user_teams"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "graceo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (136.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "team-lunch-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (128.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "team-lunch-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (403.4ms)[0m  [1m[35mCREATE DATABASE "team-lunch-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (274.6ms)[0m  [1m[35mCREATE DATABASE "team-lunch-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7284918111191696115)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190906193801)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "img_url" character varying, "company" character varying, "title" character varying, "city" character varying, "budget" integer, "alias_1" character varying, "alias_2" character varying, "alias_3" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906193801_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906193801"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTeams (20190906193901)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "teams" ("id" bigserial primary key, "team_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906193901_create_teams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906193901"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUserTeams (20190906194525)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "user_teams" ("id" bigserial primary key, "user_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906194525_create_user_teams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906194525"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateRestaurants (20190909145142)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "price" character varying, "rating" integer, "alias" character varying, "city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190909145142_create_restaurants.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190909145142"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-09 15:16:37.939704"], ["updated_at", "2019-09-09 15:16:37.939704"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7284918111191696115)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserTeam Load (0.6ms)[0m  [1m[34mSELECT "user_teams".* FROM "user_teams"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "graceo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rothb"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ada"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "Phil and Grace"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "Phil and Grace"], ["created_at", "2019-09-09 15:16:42.687143"], ["updated_at", "2019-09-09 15:16:42.687143"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."team_name" = $1 LIMIT $2[0m  [["team_name", "Google Devs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["team_name", "Google Devs"], ["created_at", "2019-09-09 15:16:42.690263"], ["updated_at", "2019-09-09 15:16:42.690263"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUserTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."team_id" = $1 LIMIT $2[0m  [["team_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."team_id" = $1 LIMIT $2[0m  [["team_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."team_id" = $1 LIMIT $2[0m  [["team_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."team_id" = $1 LIMIT $2[0m  [["team_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUserTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_teams" WHERE "user_teams"."team_id" = $1 LIMIT $2[0m  [["team_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "price", "rating", "alias", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Purple Pig"], ["price", "$$"], ["rating", 4], ["alias", "[\"Tapas/Small Plates\", \"Mediterranean\", \"Breakfast & Brunch\"]"], ["city", "Chicago"], ["created_at", "2019-09-09 15:16:42.736583"], ["updated_at", "2019-09-09 15:16:42.736583"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "price", "rating", "alias", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Eataly"], ["price", "$$"], ["rating", 4], ["alias", "[\"Speciality\", \"Pizza\", \"Italian\"]"], ["city", "Chicago"], ["created_at", "2019-09-09 15:16:42.738952"], ["updated_at", "2019-09-09 15:16:42.738952"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "price", "rating", "alias", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Imperial Lamian"], ["price", "$$"], ["rating", 4], ["alias", "[\"Dim Sum\", \"Noodles\"]"], ["city", "Chicago"], ["created_at", "2019-09-09 15:16:42.740683"], ["updated_at", "2019-09-09 15:16:42.740683"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+Started GET "/" for ::1 at 2019-09-09 10:17:01 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:04:43 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 23ms (Views: 3.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2019-09-09 11:04:49 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-09 11:05:06 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:06:12 -0500
+Started GET "/users" for ::1 at 2019-09-09 11:06:12 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 27ms (Views: 8.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:06:40 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:06:40 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 12.6ms)
+
+
+  [1m[36mTeam Load (1.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:07:08 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:07:08 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:07:12 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:07:12 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:07:43 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:07:43 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (2.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 2.3ms)
+
+
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:20:50 -0500
+Started GET "/users" for ::1 at 2019-09-09 11:20:50 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 23ms (Views: 12.1ms | ActiveRecord: 2.6ms)
+
+
+Completed 200 OK in 24ms (Views: 8.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/static/js/main.chunk.js" for ::1 at 2019-09-09 11:52:52 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/manifest.json" for ::1 at 2019-09-09 11:52:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-09-09 11:53:55 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:54:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 32ms (Views: 7.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:54:37 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (5.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 93ms (Views: 25.6ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:54:50 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:54:50 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 3.8ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:55:24 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Started GET "/teams" for ::1 at 2019-09-09 11:55:24 -0500
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.2ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:55:35 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:55:35 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mTeam Load (3.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:55:57 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:55:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:56:43 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:56:43 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:57:08 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:57:08 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:57:12 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 11:57:12 -0500
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:57:22 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:57:22 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:57:29 -0500
+Started GET "/users" for ::1 at 2019-09-09 11:57:29 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:57:31 -0500
+Started GET "/users" for ::1 at 2019-09-09 11:57:31 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:58:19 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:58:19 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:58:29 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:58:29 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:58:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:58:33 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:58:44 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:58:44 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 11:58:51 -0500
+Started GET "/users" for ::1 at 2019-09-09 11:58:51 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 12ms (Views: 1.5ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 11:58:53 -0500
+Started GET "/teams" for ::1 at 2019-09-09 11:58:53 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 6.2ms)
+
+
+  [1m[36mTeam Load (7.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:01:30 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:01:30 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:01:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:01:34 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:01:41 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:01:41 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:01:46 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:01:46 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:02:05 -0500
+Started GET "/users" for ::1 at 2019-09-09 12:02:05 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:02:52 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:02:52 -0500
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Processing by TeamsController#index as */*
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:05:39 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:05:39 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mTeam Load (3.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:05:49 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:05:49 -0500
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:06:02 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:06:02 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mTeam Load (6.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:06:10 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:06:10 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:08:50 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:08:50 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mTeam Load (1.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:08:52 -0500
+Started GET "/users" for ::1 at 2019-09-09 12:08:52 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:09:00 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:09:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:09:04 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:09:04 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:09:12 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:09:12 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:09:25 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:09:25 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mTeam Load (2.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:09:37 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:09:38 -0500
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:09:45 -0500
+Started GET "/users" for ::1 at 2019-09-09 12:09:45 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 6.1ms)
+
+
+  [1m[36mTeam Load (6.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:11:36 -0500
+Started GET "/users" for ::1 at 2019-09-09 12:11:36 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:11:58 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:11:58 -0500
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.8ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (3.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:12:06 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:12:06 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:13:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:14:00 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:14:03 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:14:03 -0500
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:14:11 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 12:14:11 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:14:15 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:14:15 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mTeam Load (2.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:14:23 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:14:23 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:14:41 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:14:41 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:15:03 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:15:03 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (2.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:15:15 -0500
+Started GET "/users" for ::1 at 2019-09-09 12:15:15 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:34:54 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:34:54 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 35ms (Views: 8.2ms | ActiveRecord: 4.5ms)
+
+
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:36:50 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 12:36:50 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 12:58:30 -0500
+Started GET "/teams" for ::1 at 2019-09-09 12:58:30 -0500
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 30ms (Views: 3.9ms | ActiveRecord: 7.1ms)
+
+
+Completed 200 OK in 44ms (Views: 9.5ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 12:58:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurants" for ::1 at 2019-09-09 12:59:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurants" for ::1 at 2019-09-09 12:59:15 -0500
+Processing by RestaurantsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant RestaurantsController::YelpApiAdapter):
+  
+app/controllers/restaurants_controller.rb:5:in `index'
+Started GET "/restaurants" for ::1 at 2019-09-09 13:01:11 -0500
+Processing by RestaurantsController#index as HTML
+Completed 200 OK in 644ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:02:05 -0500
+Processing by RestaurantsController#index as HTML
+Completed 200 OK in 573ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:02:42 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:02:42 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 20ms (Views: 2.0ms | ActiveRecord: 12.2ms)
+
+
+Completed 200 OK in 37ms (Views: 12.4ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:02:50 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:02:50 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mTeam Load (2.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:02:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:02:59 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:03:16 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:03:20 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:30 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-09 13:03:30 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:37 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:03:37 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:43 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:03:43 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:03:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:03:57 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:04:00 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:11 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:04:11 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:38 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:04:38 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:04:38 -0500
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 581ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:44 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:04:44 -0500
+Processing by TeamsController#index as */*
+Started GET "/restaurants" for ::1 at 2019-09-09 13:04:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.9ms)
+
+
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.7ms)
+
+
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 557ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:04:47 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:04:47 -0500
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 537ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:04:51 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:04:51 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Started GET "/restaurants" for ::1 at 2019-09-09 13:04:51 -0500
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 596ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:05:33 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:05:33 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:05:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 7.3ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 25ms (Views: 7.2ms | ActiveRecord: 13.1ms)
+
+
+Completed 200 OK in 985ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:16:20 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:16:20 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:16:20 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 24ms (Views: 4.3ms | ActiveRecord: 8.4ms)
+
+
+Completed 200 OK in 43ms (Views: 13.6ms | ActiveRecord: 13.6ms)
+
+
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 599ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:21:59 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:21:59 -0500
+Started GET "/users" for ::1 at 2019-09-09 13:21:59 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (2.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 49ms (Views: 11.7ms | ActiveRecord: 32.6ms)
+
+
+Completed 200 OK in 542ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 17ms (Views: 2.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:23:32 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:23:32 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (25.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 26ms (Views: 0.9ms | ActiveRecord: 25.0ms)
+
+
+  [1m[36mTeam Load (4.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 38ms (Views: 23.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:23:32 -0500
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 713ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:25:05 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:25:05 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:25:05 -0500
+Processing by RestaurantsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.6ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 569ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:25:14 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:25:14 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:25:15 -0500
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 11.3ms)
+
+
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 589ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-09 13:25:53 -0500
+Started GET "/users" for ::1 at 2019-09-09 13:25:53 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:25:53 -0500
+Processing by TeamsController#index as */*
+Processing by RestaurantsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (5.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 5.2ms)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 4.3ms)
+
+
+Completed 200 OK in 1035ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:26:11 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:26:11 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.8ms)
+
+
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:26:11 -0500
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 587ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:26:36 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:26:36 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mTeam Load (1.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:26:36 -0500
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 834ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:39:41 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:39:41 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:39:41 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantsController#index as */*
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Completed 200 OK in 595ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (2.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 622ms (Views: 4.1ms | ActiveRecord: 4.2ms)
+
+
+Completed 200 OK in 639ms (Views: 7.3ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:41:34 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:41:34 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:41:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 4.4ms)
+
+
+Processing by RestaurantsController#index as */*
+Processing by TeamsController#index as */*
+Completed 200 OK in 762ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 787ms (Views: 6.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:41:49 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:41:49 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:41:49 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (2.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 3.7ms)
+
+
+Completed 200 OK in 26ms (Views: 8.0ms | ActiveRecord: 13.7ms)
+
+
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 2199ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:41:57 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:41:57 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Started GET "/restaurants" for ::1 at 2019-09-09 13:41:57 -0500
+Processing by RestaurantsController#index as */*
+  [1m[36mTeam Load (10.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 25ms (Views: 1.7ms | ActiveRecord: 14.6ms)
+
+
+Completed 200 OK in 35ms (Views: 7.5ms | ActiveRecord: 18.9ms)
+
+
+Completed 200 OK in 649ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:42:47 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:42:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants" for ::1 at 2019-09-09 13:42:48 -0500
+Processing by TeamsController#index as */*
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 649ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 668ms (Views: 5.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-09 13:43:37 -0500
+Started GET "/restaurants" for ::1 at 2019-09-09 13:43:37 -0500
+Started GET "/teams" for ::1 at 2019-09-09 13:43:37 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Processing by RestaurantsController#index as */*
+Completed 200 OK in 651ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 668ms (Views: 1.7ms | ActiveRecord: 3.2ms)
+
+
+Completed 200 OK in 678ms (Views: 5.7ms | ActiveRecord: 9.3ms)
+
+
