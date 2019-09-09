@@ -24,6 +24,8 @@ class YelpApiAdapter
         limit: SEARCH_LIMIT
       }
       response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
+      p "*******************************************"
+      p response
       response.parse["businesses"]
     end
   
