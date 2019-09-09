@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
     end
 
     def create
+        # team = Team.find_or_create_by(team_params)
         team = Team.new(team_params)
         if team.save
             render json: team
