@@ -1,7 +1,6 @@
 require "json"
 require "http"
 
-
 API_HOST = "https://api.yelp.com"
 SEARCH_PATH = "/v3/businesses/search"
 BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
@@ -42,10 +41,4 @@ class YelpApiAdapter
     
   end
 
-#   p YelpApiAdapter.search(term, "Chicago")
-
-#   def index
-#     query = params[:term]
-#     results = YelpApiAdapter.search(query, "Chicago")
-#     render json: {message: '', results: results }
-#   end
+p YelpApiAdapter.search("japanese", "chicago")
