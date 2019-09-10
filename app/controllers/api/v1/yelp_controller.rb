@@ -43,4 +43,4 @@ class YelpApiAdapter
     
   end
 
-p YelpApiAdapter.search("japanese", "chicago")
+# p YelpApiAdapter.search("japanese", "chicago")

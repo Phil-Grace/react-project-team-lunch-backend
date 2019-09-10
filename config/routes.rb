@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # resources :restaurants
   post '/search', to: 'restaurants#search'
   # get '/search', to: 'restaurants#search'
+
+  # get '/login', to: 'sessions#create'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   
 
   # namespace :api do
