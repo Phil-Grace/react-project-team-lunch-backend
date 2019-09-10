@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :user_teams
   resources :teams
   resources :users
-  post '/newuser', to 'users#create'
+  # post '/newuser', to 'users#create'
   # resources :restaurants
   post '/search', to: 'restaurants#search'
   # get '/search', to: 'restaurants#search'
