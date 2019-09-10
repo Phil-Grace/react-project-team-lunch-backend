@@ -7,10 +7,10 @@ class RestaurantsController < ApplicationController
         query_location = params[:location]
         p query_location
         p query_term
-        # results = YelpApiAdapter.search(query_term, query_location)
+        results = YelpApiAdapter.search(query_term, query_location)
         # byebug
-        results = YelpApiAdapter.search("japanese", "chicago")
-        p results
+        # results = YelpApiAdapter.search("japanese", "chicago")
+        # p results
         render json: {message: 'YELP API', results: results}
     end
 
