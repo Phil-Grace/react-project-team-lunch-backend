@@ -17202,3 +17202,203 @@ Processing by SessionsController#create as JSON
 Completed 200 OK in 224ms (Views: 0.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/teams" for ::1 at 2019-09-10 14:39:21 -0500
+Started GET "/users" for ::1 at 2019-09-10 14:39:21 -0500
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 50ms (Views: 18.1ms | ActiveRecord: 19.8ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 173ms (Views: 121.9ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/users" for ::1 at 2019-09-10 14:39:25 -0500
+Started GET "/teams" for ::1 at 2019-09-10 14:39:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users" for ::1 at 2019-09-10 14:40:58 -0500
+Started GET "/teams" for ::1 at 2019-09-10 14:40:58 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 48ms (Views: 37.3ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/users" for ::1 at 2019-09-10 14:41:01 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-10 14:41:01 -0500
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Processing by TeamsController#index as */*
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTeam Load (3.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users" for ::1 at 2019-09-10 14:41:17 -0500
+Started GET "/teams" for ::1 at 2019-09-10 14:41:17 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTeam Load (2.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 27ms (Views: 19.0ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/search" for ::1 at 2019-09-10 14:41:23 -0500
+Processing by RestaurantsController#search as JSON
+  Parameters: {"term"=>"sushi", "location"=>"chicago", "restaurant"=>{"term"=>"sushi", "location"=>"chicago"}}
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
