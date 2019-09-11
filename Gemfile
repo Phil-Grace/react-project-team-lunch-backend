@@ -22,6 +22,7 @@ gem 'rest-client'
 gem 'dotenv'
 gem 'figaro'
 gem 'http'
+gem 'jwt'
 
 
 # Use ActiveStorage variant

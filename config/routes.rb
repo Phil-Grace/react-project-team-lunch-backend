@@ -2,15 +2,14 @@ Rails.application.routes.draw do
   resources :user_teams
   resources :teams
   resources :users
+  post '/login', to: 'auth#create'
+  delete '/logout', to: 'auth#destroy'
+  # delete '/logout', to: 'sessions#destroy'
+
   # post '/newuser', to 'users#create'
   # resources :restaurants
   post '/search', to: 'restaurants#search'
   # get '/search', to: 'restaurants#search'
-
-  # get '/login', to: 'sessions#create'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
-  
 
   # namespace :api do
   #   namespace :v1 do
