@@ -25166,3 +25166,4442 @@ Completed 202 Accepted in 37ms (Views: 0.7ms | ActiveRecord: 22.1ms)
 Completed 200 OK in 66ms (Views: 30.1ms | ActiveRecord: 34.6ms)
 
 
+Started POST "/finduser" for ::1 at 2019-09-11 15:25:39 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:25:39 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:25:39 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/gracetan/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (2.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  ↳ app/controllers/auth_controller.rb:25
+  ↳ app/controllers/teams_controller.rb:5
+Completed 202 Accepted in 57ms (Views: 0.3ms | ActiveRecord: 25.2ms)
+
+
+Completed 200 OK in 57ms (Views: 9.6ms | ActiveRecord: 20.5ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:25:39 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:25:39 -0500
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+Processing by AuthController#finduser as JSON
+  ↳ app/controllers/teams_controller.rb:5
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/application_controller.rb:35
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/auth_controller.rb:25
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+Completed 202 Accepted in 17ms (Views: 0.4ms | ActiveRecord: 8.2ms)
+
+
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 2.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 179ms (Views: 106.5ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:25:39 -0500
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:25:54 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+Started GET "/users" for ::1 at 2019-09-11 15:25:54 -0500
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:25
+Completed 202 Accepted in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:25:54 -0500
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:25:58 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+Started GET "/users" for ::1 at 2019-09-11 15:25:58 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+Started GET "/teams" for ::1 at 2019-09-11 15:25:58 -0500
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:25
+Completed 202 Accepted in 8ms (Views: 0.5ms | ActiveRecord: 4.4ms)
+
+
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.5ms)
+
+
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (2.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 49ms (Views: 35.1ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:25:59 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+Started GET "/users" for ::1 at 2019-09-11 15:25:59 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:25:59 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:25
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Completed 202 Accepted in 17ms (Views: 0.7ms | ActiveRecord: 8.0ms)
+
+
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 52ms (Views: 32.8ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/login" for ::1 at 2019-09-11 15:26:25 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"grace", "password"=>"[FILTERED]", "auth"=>{"username"=>"grace", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "grace"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 202 Accepted in 246ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:26:25 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:26:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:26:25 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:26:25 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 3.9ms)
+
+
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU", "auth"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5fQ.JGZgzn1jEInUWvHRwMADkq63OxoFtS5xrgjPcZF_-vU"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:5
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+Completed 202 Accepted in 8ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+
+
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 54ms (Views: 35.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:26:25 -0500
+Processing by TeamsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:35
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 14]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 15]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 16]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 17]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 18]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 19]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 20]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 21]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 22]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 23]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 24]]
+  ↳ app/controllers/teams_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_teams" ON "users"."id" = "user_teams"."user_id" WHERE "user_teams"."team_id" = $1[0m  [["team_id", 25]]
+  ↳ app/controllers/teams_controller.rb:5
+Completed 200 OK in 39ms (Views: 21.3ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:27:50 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:27:50 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-11 15:27:50 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:27:54 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:27:54 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:27:54 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:28:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:28:01 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:28:01 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:28:20 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:28:20 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:28:20 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:28:36 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:28:36 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:28:36 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:28:54 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:28:54 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:28:54 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:31:29 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 15:31:29 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:31:29 -0500
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:32:08 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:32:08 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:32:08 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:32:55 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:32:55 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:32:55 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:34:31 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:34:31 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:34:31 -0500
+Processing by AuthController#finduser as JSON
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+  Parameters: {"auth"=>{}}
+Completed 401 Unauthorized in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:34:49 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:34:49 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:34:49 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:35:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:35:43 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:35:43 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:43:43 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:43:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:43:43 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:45:58 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:45:58 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:45:58 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:46:05 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:46:05 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:46:05 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:47:05 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:47:05 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:47:05 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:47:17 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 15:47:17 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:47:17 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:47:37 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:47:37 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:47:37 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:48:13 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:48:13 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:48:13 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:48:16 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:48:16 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:48:16 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:48:55 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:48:55 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:48:55 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:03 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:03 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:03 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:08 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:08 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:08 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:28 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:49:28 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:35 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:35 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:35 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:36 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:36 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:36 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:37 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:37 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:37 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:40 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:40 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:49:40 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:49 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:49:49 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 15:49:49 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:49:55 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 15:49:55 -0500
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 15:49:55 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:50:01 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:50:01 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:50:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:51:20 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:51:20 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:51:20 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:51:28 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:51:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 15:51:28 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:51:30 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:51:30 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 15:51:30 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:51:41 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 15:51:41 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:51:41 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:51:59 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:51:59 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 15:51:59 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:52:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:52:01 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:52:01 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:52:04 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:52:04 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:52:04 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:52:43 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:52:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:52:43 -0500
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:52:50 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:52:50 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:52:50 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:53:23 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:53:23 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:53:23 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:53:32 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 15:53:32 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:53:32 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:55:12 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:55:12 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:55:12 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:55:24 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:55:24 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:55:24 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:55:27 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:55:27 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:55:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:56:19 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:56:19 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:56:19 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:58:08 -0500
+Started GET "/users" for ::1 at 2019-09-11 15:58:08 -0500
+Started GET "/teams" for ::1 at 2019-09-11 15:58:08 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:58:55 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 15:58:55 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:58:55 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 15:59:06 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 15:59:06 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 15:59:06 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:00:26 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:00:26 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 8ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:00:26 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:01:04 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:01:04 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:01:04 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:01:17 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:01:17 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:01:17 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:01:51 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:01:51 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:01:51 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:01:53 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:01:53 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:01:53 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:02:35 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:02:35 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:02:35 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:03:45 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:03:45 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:03:45 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:04:20 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:04:20 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-11 16:04:20 -0500
+Processing by AuthController#finduser as JSON
+Filter chain halted as :authorized rendered or redirected
+  Parameters: {"auth"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:04:24 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:04:24 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 16:04:24 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:19 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:08:19 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:08:19 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:26 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:08:26 -0500
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:08:26 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:27 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:08:27 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:08:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 61ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:48 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:08:48 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:08:48 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:51 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:08:51 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:08:51 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:08:53 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:08:53 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:08:53 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:09:13 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:09:13 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:09:13 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:09:20 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:09:20 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:09:20 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:09:31 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:09:31 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:09:31 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:09:44 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:09:44 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:09:44 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:16 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:10:16 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:10:16 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:23 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:10:23 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:10:23 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+  Parameters: {"auth"=>{}}
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:27 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:10:27 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:10:27 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:10:47 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:10:47 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:49 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:10:49 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:10:49 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:10:52 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:10:52 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:10:52 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:11:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:11:43 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:11:43 -0500
+Processing by UsersController#index as */*
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:11:56 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:11:56 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:11:56 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:12:00 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:12:00 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:12:00 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:12:02 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:12:02 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:12:02 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:12:11 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:12:11 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:12:11 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:12:14 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:12:14 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:12:14 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:13:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:13:01 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:13:01 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:13:05 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:13:05 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:13:05 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:15:02 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:15:02 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:15:02 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+  Parameters: {"auth"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:15:27 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:15:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:15:27 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:15:29 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:15:29 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:15:29 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:15:36 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:15:36 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:15:36 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:16:47 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:16:47 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:16:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:16:52 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:16:52 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:16:52 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:09 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:17:09 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:17:09 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:22 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:17:22 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:17:22 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:31 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:17:31 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:17:31 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:43 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:17:43 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:17:43 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:17:47 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:17:47 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:17:57 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:17:57 -0500
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:17:57 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:11 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:18:11 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:18:11 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:20 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:18:20 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:18:20 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:21 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:18:22 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:18:22 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:28 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:18:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:18:28 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:41 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:18:41 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:18:41 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:18:48 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:18:49 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:18:49 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:19:14 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:19:14 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:19:14 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:19:17 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:19:17 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:19:17 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:19:50 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 16:19:50 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:19:50 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:20:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:20:27 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:20:27 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:20:30 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:20:30 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:20:30 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:20:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:20:47 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:20:47 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:25:59 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:25:59 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:25:59 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:26:02 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:26:02 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:26:02 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:26:07 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:26:07 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:26:07 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:26:12 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:26:12 -0500
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-11 16:26:12 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:26:19 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:26:19 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:26:19 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:26:23 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:26:23 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:26:23 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:27:04 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:27:04 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:27:04 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:28:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:28:28 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:28:28 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:29:14 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:29:14 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:29:14 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:29:26 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:29:26 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:29:26 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:29:34 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:29:34 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:29:34 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:29:38 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:29:38 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:29:38 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:09 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:30:09 -0500
+Processing by TeamsController#index as */*
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:30:09 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:16 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:30:16 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:30:16 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by AuthController#finduser as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:18 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:30:18 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:30:18 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:43 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:30:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:30:43 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:48 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:30:48 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:30:48 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:30:54 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 16:30:54 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:30:54 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:31:14 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:31:14 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:31:14 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:31:48 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:31:48 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:31:48 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:31:53 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:31:53 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:31:53 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:32:12 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:32:12 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:32:12 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:32:34 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:32:34 -0500
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:32:34 -0500
+Completed 401 Unauthorized in 11ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:32:38 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:32:38 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:32:38 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:32:51 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:32:51 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:32:51 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:33:06 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:33:06 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:33:06 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:33:13 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:33:13 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:33:13 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:33:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:33:28 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:33:28 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:33:34 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:33:34 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:33:34 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:33:47 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:33:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:33:47 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:34:30 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:34:30 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:34:30 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:34:41 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:34:41 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:34:41 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:34:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:34:48 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:34:48 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:34:53 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:34:53 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:34:53 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:35:03 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:35:03 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:35:03 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:35:07 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:35:07 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:35:07 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:35:58 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:35:58 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:35:58 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:36:21 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:36:21 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:36:21 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:37:08 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:37:08 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:37:08 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:37:21 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:37:21 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:37:21 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:37:24 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:37:24 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:37:24 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:37:36 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:37:36 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:37:36 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:38:01 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:38:01 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:04 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:38:04 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:38:04 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:08 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:38:08 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:38:08 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:30 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:38:30 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:38:30 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:40 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:38:40 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:38:40 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:50 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 16:38:50 -0500
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:38:50 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:38:59 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:38:59 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 16:38:59 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:40:30 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:40:30 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:40:30 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:40:34 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:40:34 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:40:34 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:40:58 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:40:58 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:40:58 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:41:17 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:41:17 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:41:17 -0500
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:41:18 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:41:18 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 16:41:18 -0500
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:41:53 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:41:53 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:41:53 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:43:46 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:43:46 -0500
+Completed 401 Unauthorized in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:43:47 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:44:03 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:44:03 -0500
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Started GET "/teams" for ::1 at 2019-09-11 16:44:03 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:44:12 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:44:12 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:44:12 -0500
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:45:38 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:45:38 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:45:38 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:45:53 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:45:53 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:45:53 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:46:28 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/users" for ::1 at 2019-09-11 16:46:28 -0500
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:46:28 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:46:57 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:46:57 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:46:57 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:03 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:47:03 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:47:03 -0500
+Processing by UsersController#index as */*
+Processing by AuthController#finduser as JSON
+Filter chain halted as :authorized rendered or redirected
+  Parameters: {"auth"=>{}}
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:09 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:47:09 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:47:09 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:14 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:47:14 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:47:14 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:21 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:47:21 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:47:21 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:39 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:47:39 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:47:39 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:47:45 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:47:45 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:47:45 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:48:05 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:48:05 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:48:05 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:48:24 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:48:24 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:48:24 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:48:31 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:48:31 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:48:31 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:48:43 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:48:43 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:48:43 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:48:56 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:48:56 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:48:56 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:49:11 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:49:11 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:49:11 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:49:57 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:49:57 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:49:57 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:50:40 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:50:40 -0500
+Processing by AuthController#finduser as JSON
+Started GET "/teams" for ::1 at 2019-09-11 16:50:40 -0500
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:50:49 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:50:49 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:50:49 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:50:52 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:50:52 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:50:52 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:51:01 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/teams" for ::1 at 2019-09-11 16:51:01 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:51:01 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:51:10 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:51:10 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:51:10 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:51:58 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:51:58 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:51:58 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:52:13 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:52:13 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:52:13 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:52:16 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Started GET "/users" for ::1 at 2019-09-11 16:52:16 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:52:16 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:52:24 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:52:24 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:52:24 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:52:33 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:52:33 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:52:33 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:52:38 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:52:38 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:52:38 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:54:24 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:54:24 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/teams" for ::1 at 2019-09-11 16:54:24 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:54:49 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 16:54:49 -0500
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:54:49 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:55:47 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:55:47 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:55:47 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:56:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:56:27 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:56:27 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:56:42 -0500
+Started GET "/users" for ::1 at 2019-09-11 16:56:42 -0500
+Started GET "/teams" for ::1 at 2019-09-11 16:56:42 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 16:56:59 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 16:56:59 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 16:56:59 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:00:02 -0500
+Started GET "/users" for ::1 at 2019-09-11 17:00:02 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:00:02 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:00:15 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"auth"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 17:00:15 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:00:15 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:00:31 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"gracet", "password"=>"[FILTERED]", "user"=>{"username"=>"gracet"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (8.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gracet"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gracet"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 406 Not Acceptable in 71ms (Views: 0.4ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:01:03 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 17:01:03 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:01:03 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:01:23 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Started GET "/users" for ::1 at 2019-09-11 17:01:23 -0500
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:01:23 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:01:31 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 17:01:31 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:01:31 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:01:50 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"vdfgd", "password"=>"[FILTERED]", "title"=>"sd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "user"=>{"username"=>"vdfgd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "title"=>"sd"}}
+Unpermitted parameter: :title
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (6.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "vdfgd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "vdfgd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 406 Not Acceptable in 25ms (Views: 0.5ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:02:27 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 17:02:27 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:02:27 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:02:57 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-11 17:02:57 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:02:57 -0500
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:03:12 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"gracewew", "password"=>"[FILTERED]", "title"=>"wew", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "user"=>{"username"=>"gracewew", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "title"=>"wew"}}
+Unpermitted parameter: :title
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gracewew"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "gracewew"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 406 Not Acceptable in 18ms (Views: 0.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:04:36 -0500
+Started GET "/users" for ::1 at 2019-09-11 17:04:36 -0500
+Started GET "/teams" for ::1 at 2019-09-11 17:04:36 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 8ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:04:44 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"dsds", "password"=>"[FILTERED]", "title"=>"sds", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "user"=>{"username"=>"dsds", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "title"=>"sds"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dsds"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dsds"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 406 Not Acceptable in 40ms (Views: 0.2ms | ActiveRecord: 34.8ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:05:28 -0500
+Started GET "/users" for ::1 at 2019-09-11 17:05:28 -0500
+Started GET "/teams" for ::1 at 2019-09-11 17:05:28 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as */*
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:05:34 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"ddfd", "password"=>"[FILTERED]", "title"=>"dfddfd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "user"=>{"username"=>"ddfd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "title"=>"dfddfd"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 406 Not Acceptable in 35ms (Views: 0.4ms | ActiveRecord: 16.1ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:05:42 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"ddfd", "password"=>"[FILTERED]", "title"=>"dfddfd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "user"=>{"username"=>"ddfd", "img_url"=>"https://image.flaticon.com/icons/svg/145/145847.svg", "title"=>"dfddfd"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 406 Not Acceptable in 15ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:06:18 -0500
+Started GET "/users" for ::1 at 2019-09-11 17:06:18 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-11 17:06:18 -0500
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 17:06:28 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "title"=>"a", "img_url"=>"https://image.flaticon.com/icons/svg/145/145843.svg", "user"=>{"username"=>"a", "img_url"=>"https://image.flaticon.com/icons/svg/145/145843.svg", "title"=>"a"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+Completed 406 Not Acceptable in 18ms (Views: 0.3ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/finduser" for ::1 at 2019-09-11 17:07:36 -0500
+Started GET "/teams" for ::1 at 2019-09-11 17:07:37 -0500
+Started GET "/users" for ::1 at 2019-09-11 17:07:37 -0500
+Processing by AuthController#finduser as JSON
+  Parameters: {"token"=>"undefined", "auth"=>{"token"=>"undefined"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by TeamsController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Processing by UsersController#index as */*
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+

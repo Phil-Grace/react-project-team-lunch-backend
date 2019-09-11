@@ -5,9 +5,14 @@ class UsersController < ApplicationController
         @users = User.all
         render json: @users#, include: [:teams]
     end
+
+    # def new 
+    # end
     
     def create
         p "##################"
+        p user_params[:password]
+        
         @user = User.create(user_params)
         if @user.valid?
             render json: @user, status: :created
@@ -19,7 +24,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password, :img_url)
+        params.require(:user).permit(:username, :password, :img_url, :title)
     end
 
 end
