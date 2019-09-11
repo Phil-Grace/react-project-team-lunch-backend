@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :teams
   resources :users
   post '/login', to: 'auth#create'
+  post '/finduser', to: 'auth#finduser'
   delete '/logout', to: 'auth#destroy'
   # delete '/logout', to: 'sessions#destroy'
 

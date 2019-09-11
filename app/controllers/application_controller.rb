@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   before_action :authorized
 
-  def encode_token (payload)
+  def encode_token(payload)
     JWT.encode(payload, 'philz_greece')
   end 
 
@@ -10,10 +10,18 @@ class ApplicationController < ActionController::API
       token = auth_header.split(' ')[1]
       begin
         JWT.decode(token, 'philz_greece', true, algorithm: 'HS256')
-
       rescue JWT::DecodeError
         nil 
       end
+    end
+  end
+
+  def custom_decode(token)
+    begin
+      JWT.decode(token, 'philz_greece', true, algorithm: 'HS256')
+    rescue JWT::DecodeError
+      p "Decode Error Bruh"
+      nil
     end
   end
 
