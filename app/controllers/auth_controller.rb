@@ -30,11 +30,6 @@ class AuthController < ApplicationController
       
     
   end
-  # def destroy
-  #     session[:user_id] = nil
-  #     # redirect_to '/'
-  #     render json: {message: "User logged out"}
-  # end
 
   private
 

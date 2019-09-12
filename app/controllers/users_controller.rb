@@ -5,17 +5,13 @@ class UsersController < ApplicationController
         @users = User.all
         render json: @users#, include: [:teams]
     end
-
-    # def new 
-    # end
     
-    def create
-        p "##################"
-        p user_params[:password]
-        
-        @user = User.create(user_params)
-        if @user.valid?
-            render json: @user, status: :created
+    def create   
+        p "################"
+        @user = User.new(username: params[:username], password: params[:password], img_url: params[:img_url], title: params[:title])
+        if @user.save
+            @token = encode_token(user_id: @user.id)
+            render json: {user: @user, jwt: @token}, status: :created
         else
             render json: {errors: @user.errors.full_messages}, status: :not_acceptable
         end
@@ -24,7 +20,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password, :img_url, :title)
+        params.require(:user).permit(:username, :password, :password_digest, :img_url, :title)
     end
 
 end
