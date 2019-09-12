@@ -8,7 +8,8 @@ class AuthController < ApplicationController
       token = encode_token({user_id: @user.id})
       render json: {user: @user, jwt: token}, status: :accepted
     else 
-      render json: {message: 'Invalid username or password'}, status: :unauthorized
+      render json: {error: 'Invalid username or password'}, status: :unauthorized
+      # render json: , status: :unauthorized
     end
   end
 
@@ -25,7 +26,7 @@ class AuthController < ApplicationController
       user = User.find_by(id: decoded_id)
       render json: {user: user}, status: :accepted
     else
-      render json: {message: 'Invalid Token'}, status: :unauthorized
+      render json: {error: 'Invalid Token'}, status: :unauthorized
     end
       
     
